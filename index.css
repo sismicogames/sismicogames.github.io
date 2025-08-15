@@ -1,0 +1,117 @@
+:root{
+    --primary-color: hsl(342, 76%, 51%);
+    --secundary-color: hsl(342, 66%, 40%);
+}
+
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+
+header{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: white;
+}
+
+.main-logo{
+    display: block;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: white;
+}
+
+h4{
+    background-color: var(--primary-color);
+    color: white;
+
+    display: block;
+    width: fit-content;
+
+    font-size: 1.8em;
+
+    padding: 0.5em 1em;
+}
+
+
+.tremor{
+    display: inline-block;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0%{
+        rotate: -1deg;
+        scale: 1.1;
+    }
+    50%{
+        rotate: 1deg;
+        scale: 1;
+    }
+    100%{
+        rotate: -1deg;
+        scale: 1.1;
+    }
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.showcase{
+    position: relative;
+    flex: 1;
+    padding: 0 1em;
+
+    display: flex;
+    max-width: 50em;
+    margin-bottom: 1em;
+
+    overflow: hidden;
+    flex-basis: 45em;
+
+    .back{
+        display: flex;
+        flex-direction: column;
+        width: 140%;
+
+        transform: skewX(-5deg);
+        background-color: black;
+        overflow: hidden;
+
+        height: 30vh;
+    }
+    .back img{
+        align-self: center;
+        transform: skewX(5deg);
+        height: 100%;
+    }
+
+    .title{
+        font-size: 1.4em;
+        font-weight: bold;
+
+        margin-top: 0.3em;
+        margin-bottom: 0.4em;
+    }
+
+    .brief{
+        background-color: var(--secundary-color);
+        width: calc(100% + 10em);
+        margin-left: -2em;
+        padding-left: 4em;
+        padding-bottom: 1em;
+
+        color: white;
+    }
+}
